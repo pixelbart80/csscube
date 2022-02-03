@@ -1,6 +1,6 @@
 # csscube
-A animated 3x3x3 cube with only html and css
+A animated 3x3x3 Rubik's&trade; cube with only html and css.
 
-An exploration of the possibilities of html and css, by a developer who hasn't done anything web related since 2008 :) 
+The goal of this project is to provide a set of html files that can be used to visualize cube solving tutorials without using images or JavaScript.
 
 https://pixelbart.net/csscube.html

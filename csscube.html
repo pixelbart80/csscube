@@ -114,34 +114,35 @@
 				animation-direction: alternate;
 			}
 
-			.cubie.frt { animation-name: cubiefrt; }
-			.cubie.flt { animation-name: cubieflt; }
-			.cubie.fru { animation-name: cubiefru; }
-			.cubie.flu { animation-name: cubieflu; }
-			.cubie.brt { animation-name: cubiebrt; }
-			.cubie.blt { animation-name: cubieblt; }
-			.cubie.bru { animation-name: cubiebru; }
-			.cubie.blu { animation-name: cubieblu; }
-			.cubie.ft { animation-name: cubieft; }
-			.cubie.fl { animation-name: cubiefl; }
-			.cubie.fr { animation-name: cubiefr; }
-			.cubie.fu { animation-name: cubiefu; }
-			.cubie.bt { animation-name: cubiebt; }
-			.cubie.bl { animation-name: cubiebl; }
-			.cubie.br { animation-name: cubiebr; }
-			.cubie.bu { animation-name: cubiebu; }
-			.cubie.lt { animation-name: cubielt; }
-			.cubie.rt { animation-name: cubiert; }
-			.cubie.lu { animation-name: cubielu; }
-			.cubie.ru { animation-name: cubieru; }
-			.cubie.f { animation-name: cubief; }
-			.cubie.b { animation-name: cubieb; }
-			.cubie.l { animation-name: cubiel; }
-			.cubie.r { animation-name: cubier; }
-			.cubie.t { animation-name: cubiet; }
-			.cubie.u { animation-name: cubieu; }
+			.cubie.front.right.up { animation-name: animation_front_right_up; }
+			.cubie.front.left.up { animation-name: animation_front_left_up; }
+			.cubie.front.right.down { animation-name: animation_front_right_down; }
+			.cubie.front.left.down { animation-name: animation_front_left_down; }
+			.cubie.back.right.up { animation-name: animation_back_right_up; }
+			.cubie.back.left.up { animation-name: animation_back_left_up; }
+			.cubie.back.right.down { animation-name: animation_back_right_down; }
+			.cubie.back.left.down { animation-name: animation_back_left_down; }
+			.cubie.front.up { animation-name: animation_front_up; }
+			.cubie.front.left { animation-name: animation_front_left; }
+			.cubie.front.right { animation-name: animation_front_right; }
+			.cubie.front.down { animation-name: animation_front_down; }
+			.cubie.back.up { animation-name: animation_back_up; }
+			.cubie.back.left { animation-name: animation_back_left; }
+			.cubie.back.right { animation-name: animation_back_right; }
+			.cubie.back.down { animation-name: animation_back_down; }
+			.cubie.left.up { animation-name: animation_left_up; }
+			.cubie.right.up { animation-name: animation_right_up; }
+			.cubie.left.down { animation-name: animation_left_down; }
+			.cubie.right.down { animation-name: animation_right_down; }
+			.cubie.front { animation-name: animation_front; }
+			.cubie.back { animation-name: animation_back; }
+			.cubie.left { animation-name: animation_left; }
+			.cubie.right { animation-name: animation_right; }
+			.cubie.up { animation-name: animation_up; }
+			.cubie.down { animation-name: animation_down; }
 
-			@keyframes cubiefrt {
+			/* front right up = red blue white */
+			@keyframes animation_front_right_up {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(0deg) rotateY(0deg) rotateX(90deg); }
 				33.33% { transform: rotateX(0deg) rotateY(90deg) rotateX(90deg); }
@@ -149,7 +150,8 @@
 				100% { transform: rotateX(-90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubieflt {
+			/* front left up = red green white */
+			@keyframes animation_front_left_up {
 				0% { transform: rotateZ(0deg) rotateY(0deg); }
 				16.67% { transform: rotateZ(0deg) rotateY(0deg) }
 				33.33% { transform: rotateZ(0deg) rotateY(90deg); }
@@ -158,7 +160,8 @@
 				100% { transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg); }
 			}
 
-			@keyframes cubiefru {
+			/* front right down = red blue yellow */
+			@keyframes animation_front_right_down {
 				0% { transform: rotateZ(0deg) rotateX(0deg); }
 				16.67% { transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) rotateX(90deg); }
 				33.33% { transform: rotateZ(0deg) rotateX(0deg) rotateY(90deg) rotateX(90deg); }
@@ -167,7 +170,8 @@
 				100% { transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubieflu {
+			/* front left down = red green yellow */
+			@keyframes animation_front_left_down {
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -176,7 +180,8 @@
 				100% { transform: rotateY(90deg) rotateX(-90deg); }
 			}
 
-			@keyframes cubiebrt {
+			/* back right up = orange blue white */
+			@keyframes animation_back_right_up {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(90deg); }
 				33.33% { transform: rotateX(90deg); }
@@ -186,7 +191,8 @@
 				100% { transform: rotateZ(90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubieblt {
+			/* back left up = orange green white */
+			@keyframes animation_back_left_up {
 				0% { transform: rotateY(0deg); }
 				16.67% { transform: rotateY(0deg) }
 				33.33% { transform: rotateX(0deg) rotateY(0deg) rotateX(0deg) rotateY(90deg); }
@@ -196,7 +202,8 @@
 				100% { transform: rotateX(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg); }
 			}
 
-			@keyframes cubiebru {
+			/* back right down = orange blue yellow */
+			@keyframes animation_back_right_down {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(90deg); }
 				33.33% { transform: rotateX(90deg); }
@@ -206,7 +213,8 @@
 				100% { transform: rotateX(90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubieblu {
+			/* back left down = orange green yellow */
+			@keyframes animation_back_left_down {
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -215,7 +223,8 @@
 				100% { transform: rotateZ(90deg) rotateX(-90deg); }
 			}
 
-			@keyframes cubieft {
+			/* front up = red white */
+			@keyframes animation_front_up {
 				0% { transform: rotateZ(0deg) rotateY(0deg); }
 				16.67% { transform: rotateZ(0deg) rotateY(0deg) }
 				33.33% { transform: rotateZ(0deg) rotateY(90deg); }
@@ -224,7 +233,8 @@
 				100% { transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg); }
 			}
 
-			@keyframes cubiefl {
+			/* front left = red green */
+			@keyframes animation_front_left {
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -233,7 +243,8 @@
 				100% { transform: rotateY(90deg) rotateX(-90deg); }
 			}
 
-			@keyframes cubiefr {
+			/* front right = red blue */
+			@keyframes animation_front_right {
 				0% { transform: rotateZ(0deg) rotateX(0deg); }
 				16.67% { transform: rotateZ(0deg) rotateY(0deg) rotateX(90deg); }
 				33.33% { transform: rotateZ(0deg) rotateY(90deg) rotateX(90deg); }
@@ -241,7 +252,8 @@
 				100% { transform: rotateZ(90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubiefu {
+			/* front down = red yellow */
+			@keyframes animation_front_down {
 				0% { } 
 				50% { transform: rotateX(0deg) rotateY(0deg);}
 				66.67% { transform: rotateX(0deg) rotateY(90deg);}
@@ -249,7 +261,8 @@
 				100% { transform: rotateX(90deg) rotateY(90deg);}
 			}
 
-			@keyframes cubiebt {
+			/* back up = orange white */
+			@keyframes animation_back_up {
 				0% { transform: rotateY(0deg); }
 				16.67% { transform: rotateY(0deg) }
 				33.33% { transform: rotateX(0deg) rotateY(90deg); }
@@ -257,7 +270,8 @@
 				100% { transform: rotateX(-90deg) rotateY(90deg); }
 			}
 
-			@keyframes cubiebl {
+			/* back left = orange green */
+			@keyframes animation_back_left {
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -265,7 +279,8 @@
 				100% { transform: rotateX(-90deg); }
 			}
 
-			@keyframes cubiebr {
+			/* back right = orange blue */
+			@keyframes animation_back_right {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(90deg); }
 				33.33% { transform: rotateZ(0deg) rotateX(90deg); }
@@ -275,21 +290,24 @@
 				100% { transform: rotateZ(90deg) rotateY(90deg) rotateX(90deg); }
 			}
 
-			@keyframes cubiebu {
+			/* back down = orange yellow */
+			@keyframes animation_back_down {
 				0% { } 
 				50% { transform: rotateY(0deg);}
 				66.67% { transform: rotateY(90deg);}
 				100% { transform: rotateY(90deg);}
 			}
 
-			@keyframes cubielt {
+			/* left up = green white */
+			@keyframes animation_left_up {
 				0% { transform: rotateY(0deg); }
 				16.67% { transform: rotateY(0deg) }
 				33.33% { transform: rotateY(90deg); }
 				100% { transform: rotateY(90deg); }
 			}
 
-			@keyframes cubiert {
+			/* right up = blue white */
+			@keyframes animation_right_up {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(90deg); }
 				33.33% { transform: rotateX(90deg); }
@@ -298,7 +316,8 @@
 				100% { transform: rotateX(180deg); }
 			}
 
-			@keyframes cubielu {
+			/* left down = green yellow */
+			@keyframes animation_left_down {
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -307,7 +326,8 @@
 				100% { transform: rotateZ(90deg) rotateX(-90deg); }
 			}
 
-			@keyframes cubieru {
+			/* right down = blue yellow */
+			@keyframes animation_right_down {
 				0% { transform: rotateX(0deg); }
 				16.67% { transform: rotateX(90deg); }
 				33.33% { transform: rotateX(90deg); }
@@ -316,35 +336,22 @@
 				100% { transform: rotateX(180deg); }
 			}
 
-			@keyframes cubief { 
+			/* front = red */
+			@keyframes animation_front { 
 				0% { } 
 				100% { } 
 			}
 
-			@keyframes cubieb { 
+			/* back = orange */
+			@keyframes animation_back { 
 				0% { } 
 				83.33% { transform: rotateZ(0deg); }
 				100% { transform: rotateZ(90deg); }
 				100% { transform: rotateZ(90deg); }
 			}
 
-			@keyframes cubiet { 
-				0% { transform: rotateY(0deg); }
-				16.67% { transform: rotateY(0deg) }
-				33.33% { transform: rotateY(90deg); }
-				100% { transform: rotateY(90deg); }
-			}
-
-			@keyframes cubier { 
-				0% { transform: rotateX(0deg); }
-				16.67% { transform: rotateX(90deg); }
-				33.33% { transform: rotateX(90deg); }
-				66.67% { transform: rotateX(90deg); }
-				83.33% { transform: rotateX(180deg); }
-				100% { transform: rotateX(180deg); }
-			}
-
-			@keyframes cubiel { 
+			/* left = green */
+			@keyframes animation_left { 
 				0% { }
 				16.67% { }
 				33.33% { transform: rotateX(0deg); }
@@ -352,317 +359,336 @@
 				100% { transform: rotateX(-90deg); }
 			}
 
-			@keyframes cubieu { 
+			/* right = blue */
+			@keyframes animation_right { 
+				0% { transform: rotateX(0deg); }
+				16.67% { transform: rotateX(90deg); }
+				33.33% { transform: rotateX(90deg); }
+				66.67% { transform: rotateX(90deg); }
+				83.33% { transform: rotateX(180deg); }
+				100% { transform: rotateX(180deg); }
+			}
+
+			/* up = white */
+			@keyframes animation_up { 
+				0% { transform: rotateY(0deg); }
+				16.67% { transform: rotateY(0deg) }
+				33.33% { transform: rotateY(90deg); }
+				100% { transform: rotateY(90deg); }
+			}
+
+			/* down = yellow */
+			@keyframes animation_down { 
 				0% { } 
 				50% { transform: rotateY(0deg);}
 				66.67% { transform: rotateY(90deg);}
 				100% { transform: rotateY(90deg);}
 			}
 
-			.sticker.cfront { transform: translateZ(0.75em); }
-			.sticker.cback { transform: rotateY(180deg) translateZ(0.75em); }
-			.sticker.cleft { transform: rotateY(-90deg) translateZ(0.75em); }
-			.sticker.cright { transform: rotateY(90deg) translateZ(0.75em); }
-			.sticker.ctop { transform: rotateX(90deg) translateZ(0.75em); }
-			.sticker.cunder { transform: rotateX(-90deg) translateZ(0.75em); }
+			.sticker.front { transform: translateZ(0.75em); }
+			.sticker.back { transform: rotateY(180deg) translateZ(0.75em); }
+			.sticker.left { transform: rotateY(-90deg) translateZ(0.75em); }
+			.sticker.right { transform: rotateY(90deg) translateZ(0.75em); }
+			.sticker.up { transform: rotateX(90deg) translateZ(0.75em); }
+			.sticker.down { transform: rotateX(-90deg) translateZ(0.75em); }
 
-			.corner.frt { transform: translateX(1.5em) translateY(-1.5em) translateZ(1.5em); }
-			.corner.flt { transform: translateX(-1.5em) translateY(-1.5em) translateZ(1.5em); }
-			.corner.fru { transform: translateX(1.5em) translateY(1.5em) translateZ(1.5em); }
-			.corner.flu { transform: translateX(-1.5em) translateY(1.5em) translateZ(1.5em); }
-			.corner.brt { transform: translateX(1.5em) translateY(-1.5em) translateZ(-1.5em); }
-			.corner.blt { transform: translateX(-1.5em) translateY(-1.5em) translateZ(-1.5em); }
-			.corner.bru { transform: translateX(1.5em) translateY(1.5em) translateZ(-1.5em); }
-			.corner.blu { transform: translateX(-1.5em) translateY(1.5em) translateZ(-1.5em); }
-			.edge.ft { transform: translateY(-1.5em) translateZ(1.5em); }
-			.edge.fl { transform: translateX(-1.5em) translateZ(1.5em); }
-			.edge.fr { transform: translateX(1.5em) translateZ(1.5em); }
-			.edge.fu { transform: translateY(1.5em) translateZ(1.5em); }
-			.edge.bt { transform: translateY(-1.5em) translateZ(-1.5em); }
-			.edge.bl { transform: translateX(-1.5em) translateZ(-1.5em); }
-			.edge.br { transform: translateX(1.5em) translateZ(-1.5em); }
-			.edge.bu { transform: translateY(1.5em) translateZ(-1.5em); }
-			.edge.lt { transform: translateX(-1.5em) translateY(-1.5em); }
-			.edge.rt { transform: translateX(1.5em) translateY(-1.5em); }
-			.edge.lu { transform: translateX(-1.5em) translateY(1.5em); }
-			.edge.ru { transform: translateX(1.5em) translateY(1.5em); }
-			.center.f { transform: translateZ(1.5em); }
-			.center.b { transform: translateZ(-1.5em); }
-			.center.r { transform: translateX(1.5em); }
-			.center.l { transform: translateX(-1.5em); }
-			.center.u { transform: translateY(1.5em); }
-			.center.t { transform: translateY(-1.5em); }
+			.corner.front.right.up { transform: translateX(1.5em) translateY(-1.5em) translateZ(1.5em); }
+			.corner.front.left.up { transform: translateX(-1.5em) translateY(-1.5em) translateZ(1.5em); }
+			.corner.front.right.down { transform: translateX(1.5em) translateY(1.5em) translateZ(1.5em); }
+			.corner.front.left.down { transform: translateX(-1.5em) translateY(1.5em) translateZ(1.5em); }
+			.corner.back.right.up { transform: translateX(1.5em) translateY(-1.5em) translateZ(-1.5em); }
+			.corner.back.left.up { transform: translateX(-1.5em) translateY(-1.5em) translateZ(-1.5em); }
+			.corner.back.right.down { transform: translateX(1.5em) translateY(1.5em) translateZ(-1.5em); }
+			.corner.back.left.down { transform: translateX(-1.5em) translateY(1.5em) translateZ(-1.5em); }
+			.edge.front.up { transform: translateY(-1.5em) translateZ(1.5em); }
+			.edge.front.left { transform: translateX(-1.5em) translateZ(1.5em); }
+			.edge.front.right { transform: translateX(1.5em) translateZ(1.5em); }
+			.edge.front.down { transform: translateY(1.5em) translateZ(1.5em); }
+			.edge.back.up { transform: translateY(-1.5em) translateZ(-1.5em); }
+			.edge.back.left { transform: translateX(-1.5em) translateZ(-1.5em); }
+			.edge.back.right { transform: translateX(1.5em) translateZ(-1.5em); }
+			.edge.back.down { transform: translateY(1.5em) translateZ(-1.5em); }
+			.edge.left.up { transform: translateX(-1.5em) translateY(-1.5em); }
+			.edge.right.up { transform: translateX(1.5em) translateY(-1.5em); }
+			.edge.left.down { transform: translateX(-1.5em) translateY(1.5em); }
+			.edge.right.down { transform: translateX(1.5em) translateY(1.5em); }
+			.center.front { transform: translateZ(1.5em); }
+			.center.back { transform: translateZ(-1.5em); }
+			.center.left { transform: translateX(-1.5em); }
+			.center.right { transform: translateX(1.5em); }
+			.center.up { transform: translateY(-1.5em); }
+			.center.down { transform: translateY(1.5em); }
 
-			.cfront.outside { background-color: red; }
-			.cleft.outside { background-color: green; }
-			.cright.outside { background-color: blue; }
-			.ctop.outside { background-color: black; }
-			.cunder.outside { background-color: yellow; }
-			.cback.outside { background-color: orange; }
+			.front.outside { background-color: red; }
+			.left.outside { background-color: green; }
+			.right.outside { background-color: blue; }
+			.up.outside { background-color: white; }
+			.down.outside { background-color: yellow; }
+			.back.outside { background-color: orange; }
 			.inside { background-color: black; }
 		</style>
 	</head>
 	<body>
 		<div class="stage">
 			<div class="cube">
-				<div class="cubie frt">
-					<div class="corner frt">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front right up">
+					<div class="corner front right up">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie flt">
-					<div class="corner flt">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front left up">
+					<div class="corner front left up">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie fru">
-					<div class="corner fru">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie front right down">
+					<div class="corner front right down">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie flu">
-					<div class="corner flu">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie front left down">
+					<div class="corner front left down">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie brt">
-					<div class="corner brt">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back right up">
+					<div class="corner back right up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie blt">
-					<div class="corner blt">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back left up">
+					<div class="corner back left up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie bru">
-					<div class="corner bru">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie back right down">
+					<div class="corner back right down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie blu">
-					<div class="corner blu">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie back left down">
+					<div class="corner back left down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie ft">
-					<div class="edge ft">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front up">
+					<div class="edge front up">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie fl">
-					<div class="edge fl">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front left">
+					<div class="edge front left">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie fr">
-					<div class="edge fr">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front right">
+					<div class="edge front right">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie fu">
-					<div class="edge fu">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie front down">
+					<div class="edge front down">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie bt">
-					<div class="edge bt">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back up">
+					<div class="edge back up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie bl">
-					<div class="edge bl">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back left">
+					<div class="edge back left">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie br">
-					<div class="edge br">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back right">
+					<div class="edge back right">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie bu">
-					<div class="edge bu">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie back down">
+					<div class="edge back down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie lt">
-					<div class="edge lt">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie left up">
+					<div class="edge left up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie rt">
-					<div class="edge rt">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie right up">
+					<div class="edge right up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie lu">
-					<div class="edge lu">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie left down">
+					<div class="edge left down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie ru">
-					<div class="edge ru">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie right down">
+					<div class="edge right down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
-				<div class="cubie f">
-					<div class="center f">
-						<div class="sticker cfront outside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie front">
+					<div class="center front">
+						<div class="sticker front outside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie b">
-					<div class="center b">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback outside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie back">
+					<div class="center back">
+						<div class="sticker front inside"></div>
+						<div class="sticker back outside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie l">
-					<div class="center l">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft outside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie left">
+					<div class="center left">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left outside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie r">
-					<div class="center r">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright outside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie right">
+					<div class="center right">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right outside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie t">
-					<div class="center t">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop outside"></div>
-						<div class="sticker cunder inside"></div>
+				<div class="cubie up">
+					<div class="center up">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up outside"></div>
+						<div class="sticker down inside"></div>
 					</div>
 				</div>
-				<div class="cubie u">
-					<div class="center u">
-						<div class="sticker cfront inside"></div>
-						<div class="sticker cback inside"></div>
-						<div class="sticker cleft inside"></div>
-						<div class="sticker cright inside"></div>
-						<div class="sticker ctop inside"></div>
-						<div class="sticker cunder outside"></div>
+				<div class="cubie down">
+					<div class="center down">
+						<div class="sticker front inside"></div>
+						<div class="sticker back inside"></div>
+						<div class="sticker left inside"></div>
+						<div class="sticker right inside"></div>
+						<div class="sticker up inside"></div>
+						<div class="sticker down outside"></div>
 					</div>
 				</div>
 				<!--
