@@ -1,0 +1,22 @@
+.rotate_front_2 .cubie.front { animation-name: rotate_front_2-animation; }
+.rotate_front_2 .csscube-header:after { content: 'F2'; }
+.rotate_front_2 .corner.front.right.up .sticker.right:after { content: var(--csscube-double-down-arrow); }
+.rotate_front_2 .corner.front.right.up .sticker.up:after { content: var(--csscube-double-right-arrow); }
+.rotate_front_2 .corner.front.left.up .sticker.left:after { content: var(--csscube-double-up-arrow); }
+.rotate_front_2 .corner.front.left.up .sticker.up:after { content: var(--csscube-double-right-arrow); }
+.rotate_front_2 .corner.front.right.down .sticker.right:after { content: var(--csscube-double-down-arrow); }
+.rotate_front_2 .corner.front.right.down .sticker.down:after { content: var(--csscube-double-left-arrow); }
+.rotate_front_2 .corner.front.left.down .sticker.left:after { content: var(--csscube-double-up-arrow); }
+.rotate_front_2 .corner.front.left.down .sticker.down:after { content: var(--csscube-double-left-arrow); }
+.rotate_front_2 .edge.front.up .sticker.up:after { content: var(--csscube-double-right-arrow); }
+.rotate_front_2 .edge.front.down .sticker.down:after { content: var(--csscube-double-left-arrow); }
+.rotate_front_2 .edge.front.left .sticker.left:after { content: var(--csscube-double-up-arrow); }
+.rotate_front_2 .edge.front.right .sticker.right:after { content: var(--csscube-double-down-arrow); }
+
+@keyframes rotate_front_2-animation { 
+	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	50% { transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg); }
+	75% { transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg); }
+	80% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}

@@ -1,0 +1,365 @@
+body {
+	background-color: lightgray;
+}
+
+.csscube {
+	position: absolute;
+	font-size: 2rem;
+	width: 8em; 
+	height: 9em;
+	perspective:160em;
+	perspective-origin: 0em 0em;
+}
+
+.csscube-header {
+	position: absolute;
+	left: 0em;
+	top: 0em;
+	height: 1em;
+	width: 8em;
+	text-align: center;
+}
+
+.csscube .cube {
+	display: block;
+	position: absolute;
+	left: 4em;
+	top: 5em;
+
+	transform-style: preserve-3d;
+	transform-origin: 0em 0em 0em;
+	transform: rotateX(-30deg) rotateY(-35deg) rotateZ(0deg);
+
+	animation-delay: 3s;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.sticker {
+	display: block;
+	position: absolute;
+	width: 1.3em;
+	height: 1.3em;
+	left: -0.75em;
+	top: -0.75em;
+	background-color: darkgray;
+	opacity: 100%;
+	border: 0.1em solid;
+	border-color: var(--csscube-cube-color);
+	border-radius: 0.20em;
+	backface-visibility: visible;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.line {
+	display: block;
+	position: absolute;
+	width: 6em;
+	height: 0.1em;
+	left: -3em;
+	top: 0em;
+	border-width: 0px;
+	border-top-width: 0.1em;
+	border-top-style: solid;
+	border-top-color: green;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.line.xz { transform: rotateX(90deg); }
+.line.yz { transform: rotateY(90deg); }
+.line.yx { transform: rotateZ(90deg); }
+
+.plane {
+	display: block;
+	position: absolute;
+	width: 6em;
+	height: 6em;
+	top: -3em;
+	left: -3em;
+	opacity: 40%;
+	border: 1px solid black;
+}
+
+.plane.xz {
+	background-color: yellow;
+	transform: rotateX(90deg);
+}
+
+.plane.yz {
+	background-color: magenta;
+	transform: rotateY(90deg);
+}
+
+.plane.yx {
+	background-color: cyan;
+}
+
+.cubie, .corner, .edge, .center {
+	display: block;
+	position: absolute;
+
+	transform-style: preserve-3d;
+	transform-origin: 0em 0em 0em;
+
+	animation-delay: 3s;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+
+.sticker.front { transform: translateZ(0.75em); }
+.sticker.back { transform: rotateY(180deg) translateZ(0.75em); }
+.sticker.left { transform: rotateY(-90deg) translateZ(0.75em); }
+.sticker.right { transform: rotateY(90deg) translateZ(0.75em); }
+.sticker.up { transform: rotateX(90deg) translateZ(0.75em); }
+.sticker.down { transform: rotateX(-90deg) translateZ(0.75em); }
+
+.corner.front.right.up { transform: translateX(1.5em) translateY(-1.5em) translateZ(1.5em); }
+.corner.front.left.up { transform: translateX(-1.5em) translateY(-1.5em) translateZ(1.5em); }
+.corner.front.right.down { transform: translateX(1.5em) translateY(1.5em) translateZ(1.5em); }
+.corner.front.left.down { transform: translateX(-1.5em) translateY(1.5em) translateZ(1.5em); }
+.corner.back.right.up { transform: translateX(1.5em) translateY(-1.5em) translateZ(-1.5em); }
+.corner.back.left.up { transform: translateX(-1.5em) translateY(-1.5em) translateZ(-1.5em); }
+.corner.back.right.down { transform: translateX(1.5em) translateY(1.5em) translateZ(-1.5em); }
+.corner.back.left.down { transform: translateX(-1.5em) translateY(1.5em) translateZ(-1.5em); }
+.edge.front.up { transform: translateY(-1.5em) translateZ(1.5em); }
+.edge.front.left { transform: translateX(-1.5em) translateZ(1.5em); }
+.edge.front.right { transform: translateX(1.5em) translateZ(1.5em); }
+.edge.front.down { transform: translateY(1.5em) translateZ(1.5em); }
+.edge.back.up { transform: translateY(-1.5em) translateZ(-1.5em); }
+.edge.back.left { transform: translateX(-1.5em) translateZ(-1.5em); }
+.edge.back.right { transform: translateX(1.5em) translateZ(-1.5em); }
+.edge.back.down { transform: translateY(1.5em) translateZ(-1.5em); }
+.edge.left.up { transform: translateX(-1.5em) translateY(-1.5em); }
+.edge.right.up { transform: translateX(1.5em) translateY(-1.5em); }
+.edge.left.down { transform: translateX(-1.5em) translateY(1.5em); }
+.edge.right.down { transform: translateX(1.5em) translateY(1.5em); }
+.center.front { transform: translateZ(1.5em); }
+.center.back { transform: translateZ(-1.5em); }
+.center.left { transform: translateX(-1.5em); }
+.center.right { transform: translateX(1.5em); }
+.center.up { transform: translateY(-1.5em); }
+.center.down { transform: translateY(1.5em); }
+
+.sticker { background-color: var(--csscube-cube-color); }
+
+.corner.front.right.up .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+
+.corner.front.right.up .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.corner.front.right.up .sticker.up { 
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.corner.front.left.up .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.corner.front.left.up .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.corner.front.left.up .sticker.up { 
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.corner.front.right.down .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.corner.front.right.down .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.corner.front.right.down .sticker.down { 
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.corner.front.left.down .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.corner.front.left.down .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.corner.front.left.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.corner.back.right.up .sticker.back { 
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.corner.back.right.up .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.corner.back.right.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.corner.back.left.up .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.corner.back.left.up .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.corner.back.left.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.corner.back.right.down .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.corner.back.right.down .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.corner.back.right.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.corner.back.left.down .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.corner.back.left.down .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.corner.back.left.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.edge.front.up .sticker.front {
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.edge.front.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.edge.front.down .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.edge.front.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.edge.front.left .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.edge.front.left .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.edge.front.right .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.edge.front.right .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.edge.back.up .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.edge.back.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.edge.back.down .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.edge.back.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.edge.back.left .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.edge.back.left .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.edge.back.right .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.edge.back.right .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.edge.left.up .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.edge.left.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.edge.right.up .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.edge.right.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.edge.left.down .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-left-text-color); 
+}
+.edge.left.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.edge.right.down .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.edge.right.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}
+.center.front .sticker.front { 
+	background-color: var(--csscube-front-color); 
+	color: var(--csscube-front-text-color); 
+}
+.center.back .sticker.back {
+	background-color: var(--csscube-back-color); 
+	color: var(--csscube-back-text-color); 
+}
+.center.left .sticker.left { 
+	background-color: var(--csscube-left-color); 
+	color: var(--csscube-front-left-text-color); 
+}
+.center.right .sticker.right { 
+	background-color: var(--csscube-right-color); 
+	color: var(--csscube-right-text-color); 
+}
+.center.up .sticker.up {
+	background-color: var(--csscube-up-color); 
+	color: var(--csscube-up-text-color); 
+}
+.center.down .sticker.down {
+	background-color: var(--csscube-down-color); 
+	color: var(--csscube-down-text-color); 
+}

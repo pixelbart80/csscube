@@ -1,0 +1,36 @@
+:root {
+	--csscube-cube-color: black;
+
+	--csscube-back-color: hsl(40, 100%, 50%);
+	--csscube-back-text-color: black;
+	--csscube-back-color-inactive: hsl(40, 50%, 70%);
+
+	--csscube-down-color: hsl(60, 100%, 50%);
+	--csscube-down-text-color: black;
+	--csscube-down-color-inactive: hsl(60, 50%, 70%);
+
+	--csscube-front-color: hsl(0, 100%, 50%);
+	--csscube-front-text-color: white;
+	--csscube-front-color-inactive: hsl(0, 50%, 70%);
+
+	--csscube-left-color: hsl(120, 100%, 50%);
+	--csscube-left-text-color: black;
+	--csscube-left-color-inactive: hsl(120, 50%, 70%);
+
+	--csscube-right-color: hsl(240, 100%, 50%);
+	--csscube-right-text-color: white;
+	--csscube-right-color-inactive: hsl(240, 50%, 70%);
+
+	--csscube-up-color: hsl(0, 0%, 100%);
+	--csscube-up-text-color: black;
+	--csscube-up-color-inactive: hsl(0, 0%, 85%);
+
+	--csscube-left-arrow: '\2190';
+	--csscube-up-arrow: '\2191';
+	--csscube-right-arrow: '\2192';
+	--csscube-down-arrow: '\2193';
+	--csscube-double-left-arrow: '\21C7';
+	--csscube-double-up-arrow: '\21C8';
+	--csscube-double-right-arrow: '\21C9';
+	--csscube-double-down-arrow: '\21CA';
+}

@@ -1,0 +1,22 @@
+.rotate_right_cw .cubie.right { animation-name: rotate_right_cw-animation; }
+.rotate_right_cw .csscube-header:after { content: 'R'; }
+.rotate_right_cw .corner.front.right.up .sticker.front:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .corner.front.right.up .sticker.up:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .corner.front.right.down .sticker.front:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .corner.front.right.down .sticker.down:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .corner.back.right.up .sticker.back:after { content: var(--csscube-down-arrow); }
+.rotate_right_cw .corner.back.right.up .sticker.up:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .corner.back.right.down .sticker.back:after { content: var(--csscube-down-arrow); }
+.rotate_right_cw .corner.back.right.down .sticker.down:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .edge.front.right .sticker.front:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .edge.back.right .sticker.back:after { content: var(--csscube-down-arrow); }
+.rotate_right_cw .edge.right.up .sticker.up:after { content: var(--csscube-up-arrow); }
+.rotate_right_cw .edge.right.down .sticker.down:after { content: var(--csscube-up-arrow); }
+
+@keyframes rotate_right_cw-animation { 
+	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	50% { transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg); }
+	75% { transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg); }
+	80% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}

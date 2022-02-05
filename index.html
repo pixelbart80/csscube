@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>CSS + HTML only Rubik's Cube, by @pixelbart</title>
+		<style type="text/css">
+			:root {
+				--backgroundColor: #BBBBBB;
+				--foregroundColor: #444444;
+				--contentBackgroundColor: #DDDDDD;
+				--borderColor: #8888AA;
+				--itemBackgroundColor: #E4E4FF;
+			}
+
+			body {
+				background: var(--backgroundColor);
+				color: var(--foregroundColor);
+				font-family: sans-serif;
+			}
+
+			a, a:active, a:visited {
+				color: var(--foregroundColor);
+			}
+
+			h1 
+			{
+				font-size: 3rem;
+				text-align: center;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+
+			h2
+			{
+				font-size: 1.5rem;
+				text-align: left;
+				margin-top: 0.2rem;
+				margin-left: 0rem;
+				margin-bottom: 0.5rem;
+			}
+
+			#content
+			{
+				width: 40rem;
+				margin: auto;
+				padding: 0.2rem;
+				background: var(--contentBackgroundColor);
+				border-width: 0.1rem;
+				border-style: solid;
+				border-color: var(--borderColor);
+			}
+
+			.item
+			{
+				margin: 0.4rem;
+				padding: 0.5rem;
+				border-width: 0.1rem;
+				border-style: solid;
+				border-color: var(--borderColor);
+				background-color: var(--itemBackgroundColor);
+				font-size: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>csscube by @pixelbart</h1>
+		<div id="content">
+			<div class="item">
+				<p> <a href="demo.html"/>Animated cube</a></p>
+				<p> <a href="rotate.html"/>Animated Rubik's&trade; Cube cheat sheet</a></p>
+			</div>
+			<div class="item">
+				<p> <a href="https://github.com/pixelbart80/csscube/"/>GitHub project</a></p>
+			</div>
+		</div>
+	</body>
+</html>

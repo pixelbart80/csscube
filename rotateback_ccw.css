@@ -1,0 +1,31 @@
+.rotate_back_ccw .cubie.back.right.up { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.right.down { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.left.up { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.left.down { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.right { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.left { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.up { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back.down { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .cubie.back { animation-name: rotate_back_ccw-animation; }
+.rotate_back_ccw .csscube-header:after { content: 'B\''; }
+
+.rotate_back_ccw .corner.back.right.up .sticker.right:after { content: var(--csscube-down-arrow); }
+.rotate_back_ccw .corner.back.right.up .sticker.up:after { content: var(--csscube-right-arrow); }
+.rotate_back_ccw .corner.back.left.up .sticker.left:after { content: var(--csscube-up-arrow); }
+.rotate_back_ccw .corner.back.left.up .sticker.up:after { content: var(--csscube-right-arrow); }
+.rotate_back_ccw .corner.back.right.down .sticker.right:after { content: var(--csscube-down-arrow); }
+.rotate_back_ccw .corner.back.right.down .sticker.down:after { content: var(--csscube-left-arrow); }
+.rotate_back_ccw .corner.back.left.down .sticker.left:after { content: var(--csscube-up-arrow); }
+.rotate_back_ccw .corner.back.left.down .sticker.down:after { content: var(--csscube-left-arrow); }
+.rotate_back_ccw .edge.back.up .sticker.up:after { content: var(--csscube-right-arrow); }
+.rotate_back_ccw .edge.back.down .sticker.down:after { content: var(--csscube-left-arrow); }
+.rotate_back_ccw .edge.back.left .sticker.left:after { content: var(--csscube-up-arrow); }
+.rotate_back_ccw .edge.back.right .sticker.right:after { content: var(--csscube-down-arrow); }
+
+@keyframes rotate_back_ccw-animation { 
+	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	50% { transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg); }
+	75% { transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg); }
+	80% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}

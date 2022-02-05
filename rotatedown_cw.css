@@ -1,0 +1,22 @@
+.rotate_down_cw .cubie.down { animation-name: rotate_down_cw-animation; }
+.rotate_down_cw .csscube-header:after { content: 'D'; }
+.rotate_down_cw .corner.front.right.down .sticker.front:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.front.right.down .sticker.right:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.front.left.down .sticker.front:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.front.left.down .sticker.left:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.back.right.down .sticker.back:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.back.right.down .sticker.right:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.back.left.down .sticker.back:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .corner.back.left.down .sticker.left:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .edge.front.down .sticker.front:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .edge.back.down .sticker.back:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .edge.left.down .sticker.left:after { content: var(--csscube-right-arrow); }
+.rotate_down_cw .edge.right.down .sticker.right:after { content: var(--csscube-right-arrow); }
+
+@keyframes rotate_down_cw-animation { 
+	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	50% { transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg); }
+	75% { transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg); }
+	80% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}

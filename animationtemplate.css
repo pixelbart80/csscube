@@ -1,0 +1,189 @@
+.cube { animation-name: animation_cube; }
+.cubie.front.right.up { animation-name: animation_front_right_up; }
+.cubie.front.left.up { animation-name: animation_front_left_up; }
+.cubie.front.right.down { animation-name: animation_front_right_down; }
+.cubie.front.left.down { animation-name: animation_front_left_down; }
+.cubie.back.right.up { animation-name: animation_back_right_up; }
+.cubie.back.left.up { animation-name: animation_back_left_up; }
+.cubie.back.right.down { animation-name: animation_back_right_down; }
+.cubie.back.left.down { animation-name: animation_back_left_down; }
+.cubie.front.up { animation-name: animation_front_up; }
+.cubie.front.left { animation-name: animation_front_left; }
+.cubie.front.right { animation-name: animation_front_right; }
+.cubie.front.down { animation-name: animation_front_down; }
+.cubie.back.up { animation-name: animation_back_up; }
+.cubie.back.left { animation-name: animation_back_left; }
+.cubie.back.right { animation-name: animation_back_right; }
+.cubie.back.down { animation-name: animation_back_down; }
+.cubie.left.up { animation-name: animation_left_up; }
+.cubie.right.up { animation-name: animation_right_up; }
+.cubie.left.down { animation-name: animation_left_down; }
+.cubie.right.down { animation-name: animation_right_down; }
+.cubie.front { animation-name: animation_front; }
+.cubie.back { animation-name: animation_back; }
+.cubie.left { animation-name: animation_left; }
+.cubie.right { animation-name: animation_right; }
+.cubie.up { animation-name: animation_up; }
+.cubie.down { animation-name: animation_down; }
+
+@keyframes animation_cube {
+	0% { }
+	100% { } 
+}
+
+/* front right up = red blue white */
+@keyframes animation_front_right_up {
+	0% { }
+	100% { } 
+}
+
+/* front left up = red green white */
+@keyframes animation_front_left_up {
+	0% { }
+	100% { } 
+}
+
+/* front right down = red blue yellow */
+@keyframes animation_front_right_down {
+	0% { }
+	100% { } 
+}
+
+/* front left down = red green yellow */
+@keyframes animation_front_left_down {
+	0% { }
+	100% { } 
+}
+
+/* back right up = orange blue white */
+@keyframes animation_back_right_up {
+	0% { }
+	100% { } 
+}
+
+/* back left up = orange green white */
+@keyframes animation_back_left_up {
+	0% { }
+	100% { } 
+}
+
+/* back right down = orange blue yellow */
+@keyframes animation_back_right_down {
+	0% { }
+	100% { } 
+}
+
+/* back left down = orange green yellow */
+@keyframes animation_back_left_down {
+	0% { }
+	100% { } 
+}
+
+/* front up = red white */
+@keyframes animation_front_up {
+	0% { }
+	100% { } 
+}
+
+/* front left = red green */
+@keyframes animation_front_left {
+	0% { }
+	100% { } 
+}
+
+/* front right = red blue */
+@keyframes animation_front_right {
+	0% { }
+	100% { } 
+}
+
+/* front down = red yellow */
+@keyframes animation_front_down {
+	0% { }
+	100% { } 
+}
+
+/* back up = orange white */
+@keyframes animation_back_up {
+	0% { }
+	100% { } 
+}
+
+/* back left = orange green */
+@keyframes animation_back_left {
+	0% { }
+	100% { } 
+}
+
+/* back right = orange blue */
+@keyframes animation_back_right {
+	0% { }
+	100% { } 
+}
+
+/* back down = orange yellow */
+@keyframes animation_back_down {
+	0% { }
+	100% { } 
+}
+
+/* left up = green white */
+@keyframes animation_left_up {
+	0% { }
+	100% { } 
+}
+
+/* right up = blue white */
+@keyframes animation_right_up {
+	0% { }
+	100% { } 
+}
+
+/* left down = green yellow */
+@keyframes animation_left_down {
+	0% { }
+	100% { } 
+}
+
+/* right down = blue yellow */
+@keyframes animation_right_down {
+	0% { } 
+	100% { } 
+}
+
+/* front = red */
+@keyframes animation_front { 
+	0% { } 
+	100% { } 
+}
+
+/* back = orange */
+@keyframes animation_back { 
+	0% { } 
+	100% { } 
+}
+
+/* left = green */
+@keyframes animation_left { 
+	0% { } 
+	100% { } 
+}
+
+/* right = blue */
+@keyframes animation_right { 
+	0% { } 
+	100% { } 
+}
+
+/* up = white */
+@keyframes animation_up { 
+	0% { } 
+	100% { } 
+}
+
+/* down = yellow */
+@keyframes animation_down { 
+	0% { } 
+	100% { } 
+}
+
