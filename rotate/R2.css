@@ -1,0 +1,31 @@
+@import "../csscube-colors.css";
+@import "../csscube.css";
+@import "../masks/rightactive.css";
+
+.cube.rotate { 
+	transition: transform 1.5s;
+	transform: rotateX(-180deg) rotateY(0deg) rotateZ(0deg);
+}
+
+@media(hover: hover) and (pointer: fine) {
+	.cube.rotate:hover {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+}
+
+.cube.rotate:active {
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.corner.front.right.up .sticker.front:after { content: var(--csscube-double-up-arrow); }
+.corner.front.right.up .sticker.up:after { content: var(--csscube-double-up-arrow); }
+.corner.front.right.down .sticker.front:after { content: var(--csscube-double-up-arrow); }
+.corner.front.right.down .sticker.down:after { content: var(--csscube-double-up-arrow); }
+.corner.back.right.up .sticker.back:after { content: var(--csscube-double-down-arrow); }
+.corner.back.right.up .sticker.up:after { content: var(--csscube-double-up-arrow); }
+.corner.back.right.down .sticker.back:after { content: var(--csscube-double-down-arrow); }
+.corner.back.right.down .sticker.down:after { content: var(--csscube-double-up-arrow); }
+.edge.front.right .sticker.front:after { content: var(--csscube-double-up-arrow); }
+.edge.back.right .sticker.back:after { content: var(--csscube-double-down-arrow); }
+.edge.right.up .sticker.up:after { content: var(--csscube-double-up-arrow); }
+.edge.right.down .sticker.down:after { content: var(--csscube-double-up-arrow); }

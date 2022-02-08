@@ -1,5 +1,8 @@
 body {
-	background-color: lightgray;
+	font-family: sans-serif;
+	background-color: #E4E4FF;
+	color: #444444;
+	margin: 0rem;
 }
 
 .csscube {
@@ -9,6 +12,9 @@ body {
 	height: 9em;
 	perspective:160em;
 	perspective-origin: 0em 0em;
+	transform-style: preserve-3d;
+	transform-origin: 0em 0em 0em;
+	transform: rotateX(-30deg) rotateY(-35deg) rotateZ(0deg);
 }
 
 .csscube-header {
@@ -20,20 +26,22 @@ body {
 	text-align: center;
 }
 
-.csscube .cube {
+.cube {
 	display: block;
 	position: absolute;
-	left: 4em;
-	top: 5em;
+	left: 5em;
+	top: 3em;
 
 	transform-style: preserve-3d;
 	transform-origin: 0em 0em 0em;
-	transform: rotateX(-30deg) rotateY(-35deg) rotateZ(0deg);
 
 	animation-delay: 3s;
 	animation-duration: 30s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .sticker {
@@ -150,7 +158,6 @@ body {
 	background-color: var(--csscube-front-color); 
 	color: var(--csscube-front-text-color); 
 }
-
 .corner.front.right.up .sticker.right { 
 	background-color: var(--csscube-right-color); 
 	color: var(--csscube-right-text-color); 

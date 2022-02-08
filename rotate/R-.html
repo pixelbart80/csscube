@@ -3,12 +3,11 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>csscube by @pixelbart</title>
-		<link rel="stylesheet" href="csscube-colors.css"/>
-		<link rel="stylesheet" href="csscube.css"/>
+		<link rel="stylesheet" href="R-.css"/>
 	</head>
 	<body>
 		<div class="csscube">
-			<div class="cube">
+			<div class="cube static">
 				<!-- front up -->
 				<div class="cubie front left up">
 					<div class="corner front left up">
@@ -30,16 +29,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie front right up">
-					<div class="corner front right up">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- front right up -> rotate -->
 
 				<!-- front center -->
 				<div class="cubie front left">
@@ -62,16 +52,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie front right">
-					<div class="edge front right">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- front right -> rotate -->
 
 				<!-- front down -->
 				<div class="cubie front left down">
@@ -94,16 +75,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie front right down">
-					<div class="corner front right down">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- front right down -> rotate -->
 
 				<!-- middle up -->
 				<div class="cubie left up">
@@ -126,16 +98,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie right up">
-					<div class="edge right up">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- right up -> rotate -->
 
 				<!-- middle center -->
 				<div class="cubie left">
@@ -149,20 +112,11 @@
 					</div>
 				</div>
 				<!-- (no cubie for center) -->
-				<div class="cubie right">
-					<div class="center right">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- right -> rotate -->
 
 				<!-- middle down -->
-				<div class="cubie left down">
-					<div class="edge left down">
+				<div class="cubie back left down">
+					<div class="corner back left down">
 						<div class="sticker front"></div>
 						<div class="sticker back"></div>
 						<div class="sticker left"></div>
@@ -181,16 +135,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie right down">
-					<div class="edge right down">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- back right down -> rotate -->
 
 				<!-- back up -->
 				<div class="cubie back left up">
@@ -213,16 +158,7 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie back right up">
-					<div class="corner back right up">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- back right up -> rotate -->
 
 				<!-- back center -->
 				<div class="cubie back left">
@@ -245,20 +181,11 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
-				<div class="cubie back right">
-					<div class="edge back right">
-						<div class="sticker front"></div>
-						<div class="sticker back"></div>
-						<div class="sticker left"></div>
-						<div class="sticker right"></div>
-						<div class="sticker up"></div>
-						<div class="sticker down"></div>
-					</div>
-				</div>
+				<!-- back right -> rotate -->
 
 				<!-- back down -->
-				<div class="cubie back left down">
-					<div class="corner back left down">
+				<div class="cubie left down">
+					<div class="edge left down">
 						<div class="sticker front"></div>
 						<div class="sticker back"></div>
 						<div class="sticker left"></div>
@@ -277,8 +204,91 @@
 						<div class="sticker down"></div>
 					</div>
 				</div>
+				<!-- right down -> rotate -->
+			</div>
+			<div class="cube rotate" ontouchstart="">
+				<div class="cubie front right up">
+					<div class="corner front right up">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie front right">
+					<div class="edge front right">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie front right down">
+					<div class="corner front right down">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie right up">
+					<div class="edge right up">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie right">
+					<div class="center right">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
 				<div class="cubie back right down">
 					<div class="corner back right down">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie back right up">
+					<div class="corner back right up">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie back right">
+					<div class="edge back right">
+						<div class="sticker front"></div>
+						<div class="sticker back"></div>
+						<div class="sticker left"></div>
+						<div class="sticker right"></div>
+						<div class="sticker up"></div>
+						<div class="sticker down"></div>
+					</div>
+				</div>
+				<div class="cubie right down">
+					<div class="edge right down">
 						<div class="sticker front"></div>
 						<div class="sticker back"></div>
 						<div class="sticker left"></div>

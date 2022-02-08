@@ -22,7 +22,7 @@
 	--csscube-right-color-inactive: hsl(240, 50%, 70%);
 
 	--csscube-up-color: hsl(0, 0%, 100%);
-	--csscube-up-text-color: black;
+	--csscube-up-text-color: black; 
 	--csscube-up-color-inactive: hsl(0, 0%, 85%);
 
 	--csscube-left-arrow: '\2190';

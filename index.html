@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8"/>
 		<title>CSS + HTML only Rubik's Cube, by @pixelbart</title>
 		<style type="text/css">
 			:root {
@@ -58,14 +60,29 @@
 				background-color: var(--itemBackgroundColor);
 				font-size: 1rem;
 			}
+
+			.item .csscube-container {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 16em;
+				height: 16em;
+				border: 0px;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>csscube by @pixelbart</h1>
 		<div id="content">
+			<h1>csscube by @pixelbart</h1>
+			<p align="center">100% css+html</p>
 			<div class="item">
-				<p> <a href="demo.html"/>Animated cube</a></p>
-				<p> <a href="rotate.html"/>Animated Rubik's&trade; Cube cheat sheet</a></p>
+				<h2>Rotate preview with hover and touch support</h2>
+				<iframe class="csscube-container" src="rotate/R.html" scrolling="no"></iframe>
+				<p> <a href="rotate.html"/>More</a></p>
+			</div>
+			<div class="item">
+				<h2>Animated cube</h2>
+				<iframe class="csscube-container" src="demo.html" scrolling="no"></iframe>
 			</div>
 			<div class="item">
 				<p> <a href="https://github.com/pixelbart80/csscube/"/>GitHub project</a></p>
