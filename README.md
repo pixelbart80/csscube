@@ -6,7 +6,6 @@ The goal of this project is to provide a set of html files that can be used to v
 Other goals are:
 - As little browser-specific css as possible;
 - Works on all modern browsers, no effort in supporting very old browsers;
-- All styling will be done in css, the html is the same for each cube.
 
 The following features are implemented:
 - Active/inactive cubies;
@@ -15,6 +14,7 @@ The following features are implemented:
 - Text (single character) on cubes;
 - Central colors/styling via css variables (partial);
 - Rotation preview with hover/touch.
+- Generate code with script
 
 ToDo:
 - Improve performance;
@@ -27,7 +27,8 @@ The latest version is always available here:
 https://pixelbart.net/csscube/
 
 # Installation
-Download the files and open in a browser of choice.
+- Linux: run rotate/generate.pl
+- Windows: install Perl and run rotate/generate.pl
 
 # License
 This project is licensed under the Apache license.
