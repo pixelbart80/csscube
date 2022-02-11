@@ -47,8 +47,8 @@ body {
 .sticker {
 	display: block;
 	position: absolute;
-	width: 1.3em;
-	height: 1.3em;
+	width: 1.5em;
+	height: 1.5em;
 	left: -0.75em;
 	top: -0.75em;
 	background-color: darkgray;
@@ -59,6 +59,7 @@ body {
 	backface-visibility: visible;
 	text-align: center;
 	vertical-align: middle;
+	box-sizing: border-box;
 }
 
 .line {
