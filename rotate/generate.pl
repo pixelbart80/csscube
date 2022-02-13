@@ -14,6 +14,8 @@ my %arrows = (
 	"up" => { "left" => "left", "right" => "left", "front" => "left", "back" => "left" }
 );
 
+my %titles = ("-" => "'", "2" => "2", "" => "");
+
 sub GetArrow
 {
 	my $side = $_[0];
@@ -90,6 +92,8 @@ foreach $side (keys %sides)
 		}
 
 		my $filename = $sides{$side}.$rotation;
+		my $title = $sides{$side} . $titles{$rotation};
+
 		open (HTML, '>', "$filename.html");
 		open (CSS, '>', "$filename.css");
 
@@ -101,6 +105,7 @@ foreach $side (keys %sides)
 \@import "../csscube-colors.css";
 \@import "../csscube.css";
 \@import "../masks/${side}active.css";
+\@import "rotate.css";
 .cube.rotate {
 	transition: transform ${transitionSeconds}s;
 	transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg);
@@ -138,7 +143,10 @@ ENDCSS
 		<link rel="stylesheet" href="$filename.css"/>
 	</head>
 	<body>
-		<div class="csscube">
+		<div class="box">
+			<div class="row header">$title</div>
+			<div class="row content">
+				<div class="csscube">
 ENDHTML
 
 		my $x;
@@ -152,11 +160,12 @@ ENDHTML
 			my $touchStart = "";
 			if ($group eq "rotate")
 			{
+				# This is the reason why we can't completely sandbox the iframe. Thanks Mobile Safari!
 				$touchStart = 'ontouchstart=""';
 			}
 
 			print HTML << "ENDHTML";
-			<div class="cube $group" $touchStart>
+					<div class="cube $group" $touchStart>
 ENDHTML
 			foreach $x ("left", "center", "right")
 			{
@@ -180,8 +189,8 @@ ENDHTML
 								my $e = join(" ", @edges);
 
 								print HTML << "ENDHTML";
-				<div class="cubie $e">
-					<div class="$type $e">
+						<div class="cubie $e">
+							<div class="$type $e">
 ENDHTML
 
 								foreach $sticker (keys %sides)
@@ -202,13 +211,13 @@ ENDCSS
 									}
 
 									print HTML << "ENDHTML";
-						<div class="sticker $sticker $orientation"></div>
+								<div class="sticker $sticker $orientation"></div>
 ENDHTML
 								}
 
 								print HTML << 'ENDHTML';
-					</div>
-				</div>
+							</div>
+						</div>
 ENDHTML
 							}
 						}
@@ -216,12 +225,38 @@ ENDHTML
 				}
 			}
 
-			print HTML << 'ENDHTML'
-			</div>
+			print HTML << 'ENDHTML';
+					</div>
 ENDHTML
 		}
 
+		print HTML << 'ENDHTML';
+				</div>
+			</div>
+			<div class="row footer">
+ENDHTML
+
+		my $menuSide;
+		foreach $menuSide (keys %sides)
+		{
+			my $menuRotation;
+			foreach $menuRotation ("", "-", "2")
+			{
+				my $menuFilename = $sides{$menuSide}.$menuRotation;
+				my $menuTitle = $sides{$menuSide}.$titles{$menuRotation};
+				my $menuActive = "";
+				if ($menuFilename eq $filename)
+				{
+					$menuActive = " active";
+				}
+
+				print HTML << "ENDHTML";
+				<div class="link$menuActive"><a href="$menuFilename.html">$menuTitle</a></div>
+ENDHTML
+			}
+		}
 		print HTML << 'ENDHTML'
+			</div>
 		</div>
 	</body>
 </html>

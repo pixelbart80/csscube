@@ -48,6 +48,7 @@
 				border-width: 0.1rem;
 				border-style: solid;
 				border-color: var(--borderColor);
+				box-sizing: border-box;
 			}
 
 			.item
@@ -65,9 +66,23 @@
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
-				width: 16em;
-				height: 16em;
 				border: 0px;
+			}
+
+			iframe {
+				resize: both;
+				overflow: auto;
+				flex-grow: 1;
+				flex-shrink: 1;
+			}
+
+			.flexie {
+				width: 24em;
+				height: 32em;
+				margin: auto;
+				display: flex;
+				overflow: hidden;
+				resize: both;
 			}
 		</style>
 	</head>
@@ -77,8 +92,10 @@
 			<p align="center">100% css+html</p>
 			<div class="item">
 				<h2>Rotate preview with hover and touch support</h2>
-				<iframe class="csscube-container" src="rotate/R.html" scrolling="no"></iframe>
-				<p> <a href="rotate.html"/>More</a></p>
+				<div class="flexie">
+					<!-- allow-scripts because Mobile Safari needs ontouchstart="" to let ":active"-triggers fire on touch screens... -->
+					<iframe class="csscube-container" src="rotate/R.html" scrolling="no" sandbox="allow-scripts"></iframe>
+				</div>
 			</div>
 			<div class="item">
 				<h2>Animated cube</h2>

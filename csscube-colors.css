@@ -1,4 +1,7 @@
 :root {
+	--csscube-page-background-color: #E4E4E4;
+	--csscube-page-foreground-color: #444454;
+
 	--csscube-cube-color: black;
 
 	--csscube-back-color: hsl(40, 100%, 50%);

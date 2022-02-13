@@ -1,15 +1,13 @@
 body {
 	font-family: sans-serif;
-	background-color: #E4E4FF;
-	color: #444444;
+	color: var(--csscube-page-foreground-color);;
 	margin: 0rem;
 }
 
 .csscube {
-	position: absolute;
-	font-size: 2rem;
+	position: relative;
 	width: 8em; 
-	height: 9em;
+	height: 8em;
 	perspective:160em;
 	perspective-origin: 0em 0em;
 	transform-style: preserve-3d;

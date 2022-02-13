@@ -1,0 +1,76 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.box {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.box .row.header {
+	background-color: var(--csscube-page-foreground-color);
+	border-radius: 0.5em 0.5em 0px 0px;
+	color: var(--csscube-page-background-color);
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+.box .row.footer {
+	background-color: var(--csscube-page-foreground-color);
+	color: var(--csscube-page-background-color);
+	font-size: 1rem;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.link {
+	width: 1.5em;
+	text-align: center;
+	padding: 0.1em;
+	background-color: var(--csscube-page-foreground-color);
+	color: var(--csscube-page-background-color);
+}
+
+.link.active {
+	background-color: var(--csscube-page-background-color);
+	color: var(--csscube-page-foreground-color);
+}
+
+.link a:hover, .link a:active, .link a:link, .link a:visited
+{
+	color: var(--csscube-page-background-color);
+	text-decoration: none;
+}
+
+.link.active a:hover, .link.active a:active, .link.active a:link, .link.active a:visited
+{
+	color: var(--csscube-page-foreground-color);
+	text-decoration: none;
+}
+
+.box .content {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+	font-size: 12.5vw;
+	border-width: 0px 1px 0px 1px;
+	border-color: var(--csscube-page-foreground-color);
+	border-style: solid;
+	background-color: var(--csscube-page-background-color);
+	box-sizing: border-box;
+}
