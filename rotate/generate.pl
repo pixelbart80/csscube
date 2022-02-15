@@ -104,7 +104,6 @@ foreach $side (keys %sides)
 		print CSS << "ENDCSS";
 \@import "../csscube-colors.css";
 \@import "../csscube.css";
-\@import "../masks/${side}active.css";
 \@import "rotate.css";
 .cube.rotate {
 	transition: transform ${transitionSeconds}s;
@@ -199,11 +198,17 @@ ENDHTML
 									if ($e =~ /$sticker/)
 									{
 										$orientation = "outside";
+										my $class = join(".", @edges);
 
-										if ($group eq "rotate" && $sticker ne $side)
+										if ($group eq "static")
+										{
+											print CSS << "ENDCSS";
+.$type.$class .sticker.$sticker { background-color: var(--csscube-$sticker-color-inactive); }
+ENDCSS
+										}
+										elsif ($group eq "rotate" && $sticker ne $side)
 										{
 											my $arrow = GetArrow($side, $sticker, $rotation);
-											my $class = join(".", @edges);
 											print CSS << "ENDCSS";
 .$type.$class .sticker.$sticker:after { content: var(--csscube-$arrow-arrow); }
 ENDCSS
@@ -237,13 +242,13 @@ ENDHTML
 ENDHTML
 
 		my $menuSide;
-		foreach $menuSide (keys %sides)
+		foreach $menuSide ("", "-", "2")
 		{
 			my $menuRotation;
-			foreach $menuRotation ("", "-", "2")
+			foreach $menuRotation (keys %sides)
 			{
-				my $menuFilename = $sides{$menuSide}.$menuRotation;
-				my $menuTitle = $sides{$menuSide}.$titles{$menuRotation};
+				my $menuFilename = $sides{$menuRotation}.$menuSide;
+				my $menuTitle = $sides{$menuRotation}.$titles{$menuSide};
 				my $menuActive = "";
 				if ($menuFilename eq $filename)
 				{
